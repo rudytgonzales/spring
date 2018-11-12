@@ -1,0 +1,11 @@
+-- table works with pg 10 and spring mvc postgresql
+create table if not exists users (
+	username  VARCHAR(45) NOT NULL,
+	password  VARCHAR(45) NULL,
+	firstname VARCHAR(45) NOT NULL,
+	lastname  VARCHAR(45) NULL,
+	email     VARCHAR(45) NULL,
+	address   VARCHAR(45) NULL,
+	phone   integer NULL,
+	PRIMARY KEY (username)
+);

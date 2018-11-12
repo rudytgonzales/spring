@@ -1,0 +1,8 @@
+psql -d your_db_name
+create user your_user;;
+alter user appuser with encrypted password 'your_password';
+grant all privileges on database your_db_name to your_user;
+psql -d your_db_name -U your_user --password < create_your_ddl.psql
+-- original project credits to: javabyranjith/spring-framework-mvc
+-- modified here in this project to work with postgresql 10+
+
